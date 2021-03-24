@@ -1,0 +1,23 @@
+.navbarBG{
+    height: 9vh;
+    background-color: #5cc4c4;
+    border: 1px solid #6a768f;
+    font-size: 2.5rem;
+    color: white;
+    
+    .navButtons {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    Nav-Link{
+        color:white;
+    }
+}
+
+.forFun {
+    font-size: 5rem;
+    text-align: center;
+    margin: 0px;
+}
