@@ -11,7 +11,7 @@ export function HeaderNav(props: {}) {
     <Navbar variant="dark" className="navbarBG" collapseOnSelect expand="md">
       <Nav className="navButtons">
         <LinkContainer exact to="/">
-          <Nav.Link> Derrick Stone </Nav.Link>
+          <Nav.Link>" Derrick Stone "</Nav.Link>
         </LinkContainer>
       </Nav>
      
