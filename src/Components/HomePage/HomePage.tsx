@@ -1,7 +1,7 @@
 import React from 'react';
-import {MainLayout} from './MainLayout'
-import { HeaderNav } from './NavBar/NavigationBar';
-
+import {MainLayout} from '../MainLayout/MainLayout'
+import { HeaderNav } from '../NavBar/NavigationBar';
+import './style.scss';
 export function HomePage (props: {}){
 
     let background = {
@@ -26,7 +26,7 @@ export function HomePage (props: {}){
     return (
         <MainLayout>
             <div style={background.header}>
-                <p className="forFun">
+                <p className="hp">
                     Hello World!
                 </p>
             </div>
