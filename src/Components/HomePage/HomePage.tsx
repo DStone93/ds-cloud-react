@@ -6,7 +6,7 @@ import "./style.scss";
 export function HomePage(props: {}) {
   return (
     <MainLayout>
-      <section id="landingPage">
+      <section id="landingPage" className="landingPage">
         <div className="dsFeature">
           <h1>Derrick Stone</h1>
           <h4>Junior Software Developer</h4>
@@ -29,7 +29,7 @@ export function HomePage(props: {}) {
 
       <section id="contactPage">
         <div className="contactContainer">
-          <Form>
+          <Form >
             <Row className="RowSpace">
               <h1>Contact</h1>
               <h5>Under Construction</h5>
@@ -46,7 +46,7 @@ export function HomePage(props: {}) {
                 placeholder="Enter Message"
               ></Form.Control>
             </Row>
-            <button> Submit </button>
+            <button disabled> Submit </button>
           </Form>
         </div>
       </section>

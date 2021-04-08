@@ -10,10 +10,10 @@ export function HeaderNav(props: {}) {
       bg="dark"
       variant="dark"
       collapseOnSelect
-      // expand="md"
+      expand="sm"
       className="navbarBG"
     >
-      <Navbar.Toggle />
+      <Navbar.Toggle/>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
           <li>
@@ -26,15 +26,6 @@ export function HeaderNav(props: {}) {
             <a href="#contactPage"> Contact </a>
           </li>
         </Nav>
-        {/* <Nav className="navButtons">
-            <LinkContainer to="/intro2">
-              <Nav.Link>Projects</Nav.Link>
-            </LinkContainer>
-
-            <LinkContainer to="/profile" className="navContact">
-              <Nav.Link>Contact</Nav.Link>
-            </LinkContainer>
-          </Nav> */}
       </Navbar.Collapse>
     </Navbar>
   );
