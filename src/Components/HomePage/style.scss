@@ -1,6 +1,92 @@
 .hp {
+  font-size: 5rem;
+  color: rgb(119, 32, 32);
+  display: flex;
+  justify-content: center;
+}
+
+#landingPage {
+  top: -70px;
+  width: 100%;
+  height: 100vh;
+  // padding: 15% 0;
+  background: url(https://i.pinimg.com/originals/ef/70/85/ef7085be91d78613f0938fee57e45f4a.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .dsFeature {
+    margin-left: 65vw;
+    margin-top: 55vh;
+  }
+
+  h1 {
     font-size: 5rem;
-    color: rgb(119, 32, 32);;
+    text-shadow: 1px 2px rgb(168, 168, 168);
+  }
+
+  h4 {
+    text-align: center;
+  }
+}
+
+#intro2 {
+  border: 1px black solid;
+  width: 100%;
+  height: 100vh;
+  // padding: 15% 0;
+  text-align: center;
+  // background: url(https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=2f682168e7b0af70811c914882b0750b)
+  //   no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .dContainer {
+    margin-top: 25vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#contactPage {
+  width: 100%;
+  height: 100vh;
+  // padding: 15% 0;
+  text-align: center;
+  background: url(https://wallpaperaccess.com/full/1657858.jpg) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .contactContainer {
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  Form {
+    width: 50vw;
+  }
+
+  .RowSpace {
+    padding: 5px;
+  }
+
+  .cOMessage {
+    height: 15vh;
+  }
+
+  button {
+    float: right;
+  }
 }

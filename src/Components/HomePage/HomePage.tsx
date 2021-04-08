@@ -1,38 +1,55 @@
-import React from 'react';
-import {MainLayout} from '../MainLayout/MainLayout'
-import { HeaderNav } from '../NavBar/NavigationBar';
-import './style.scss';
-export function HomePage (props: {}){
+import { Row, Col, Button, Form } from "react-bootstrap";
+import { MainLayout } from "../MainLayout/MainLayout";
+import "./style.scss";
+// import {Hire_Derrick_S} from '../../resume/Hire_Derrick_S'
 
-    let background = {
-        header: {
-          background: 'rgba(0, 0, 0, 0.5)',
-          backgroundImage:
-            'url(https://img5.goodfon.com/wallpaper/nbig/3/98/abstraktnyi-geometricheskii-linii-background-fon.jpg)',
-          height: '100vh',
-    
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-        },
-    
-        content: {
-          height: '100%',
-          width: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        },
-      };
+export function HomePage(props: {}) {
+  return (
+    <MainLayout>
+      <section id="landingPage">
+        <div className="dsFeature">
+          <h1>Derrick Stone</h1>
+          <h4>Junior Software Developer</h4>
+        </div>
+      </section>
 
-    return (
-        <MainLayout>
-            <div style={background.header}>
-                <p className="hp">
-                    Hello World!
-                </p>
-            </div>
-        </MainLayout>
-        
-        
-    )
+      <section id="intro2">
+        <div className="dContainer">
+          <button className="button">
+            <a
+              className="button"
+              href="../../resume/Hire_Derrick_S.pdf"
+              download="Hire_Derrick_S.pdf"
+            >
+              Download Resume
+            </a>
+          </button>
+        </div>
+      </section>
+
+      <section id="contactPage">
+        <div className="contactContainer">
+          <Form>
+            <Row className="RowSpace">
+              <h1>Contact</h1>
+              <h5>Under Construction</h5>
+            </Row>
+            <Row className="RowSpace">
+              <Form.Control placeholder="Enter Name"></Form.Control>
+            </Row>
+            <Row className="RowSpace">
+              <Form.Control placeholder="Enter E-mail"></Form.Control>
+            </Row>
+            <Row className="RowSpace">
+              <Form.Control
+                className="cOMessage"
+                placeholder="Enter Message"
+              ></Form.Control>
+            </Row>
+            <button> Submit </button>
+          </Form>
+        </div>
+      </section>
+    </MainLayout>
+  );
 }
-
