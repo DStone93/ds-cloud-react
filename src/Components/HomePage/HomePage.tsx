@@ -13,15 +13,16 @@ export function HomePage(props: {}) {
         </div>
       </section>
 
-      <section id="intro2">
+      <section id="projects">
         <div className="dContainer">
-          <button className="button">
+          <button className="button" disabled>
             <a
               className="button"
               href="../../resume/Hire_Derrick_S.pdf"
               download="Hire_Derrick_S.pdf"
+              
             >
-              Download Resume
+              Download Resume (disabled)
             </a>
           </button>
         </div>

@@ -20,7 +20,7 @@ export function HeaderNav(props: {}) {
             <a href="#landingPage"> Derrick Stone </a>
           </li>
           <li>
-            <a href="#intro2"> Page 2 </a>
+            <a href="#projects"> Projects </a>
           </li>
           <li>
             <a href="#contactPage"> Contact </a>
