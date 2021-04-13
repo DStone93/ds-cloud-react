@@ -1,7 +1,4 @@
-import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-
 import "./style.scss";
 
 export function HeaderNav(props: {}) {
@@ -13,9 +10,9 @@ export function HeaderNav(props: {}) {
       expand="sm"
       className="navbarBG"
     >
-      <Navbar.Toggle/>
+      <Navbar.Toggle className="nbToggle"></Navbar.Toggle>
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav>
+        <Nav className="m-auto">
           <li>
             <a href="#landingPage"> Derrick Stone </a>
           </li>

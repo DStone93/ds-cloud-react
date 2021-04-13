@@ -5,15 +5,23 @@
   padding: 0px;
   width: 100%;
   height: 8vh;
-  background-color:transparent !important;
-
+  background-color: transparent !important;
+  justify-content: center;
   a {
-    padding: 10px; 
+    padding: 10px;
     font-size: 2rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     text-shadow: 1px 2px rgb(71, 71, 71);
     color: black;
     align-items: center;
     text-align: center;
   }
+
+  .nbToggle {
+    float: left !important;
+  }
+}
+
+.nbToggle {
+  float: left !important;
 }

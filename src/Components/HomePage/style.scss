@@ -22,7 +22,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   h1 {
@@ -37,8 +37,23 @@
     // text-shadow: 1px 2px rgb(5, 5, 5);
     color: rgb(219, 192, 192);
   }
-}
 
+  .resContainer {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+    .resumeButton {
+      position: absolute;
+      bottom: 25vh;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+}
 
 // @media (min-width:320px) and (max-width:480px) {
 //   .landingPage {
@@ -57,10 +72,8 @@
 //       display: hidden;
 //     }
 //   }
-  
+
 // }
-
-
 
 #projects {
   border: 1px black solid;
@@ -75,12 +88,12 @@
   -o-background-size: cover;
   background-size: cover;
 
-  .dContainer {
-    margin-top: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  .projCont {
+    margin-top: 6vh;
+    .githubLogo {
+      height: 9vh;
+      width: 15vw;
+    }
   }
 }
 
@@ -102,6 +115,22 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .socialMedia {
+    bottom: 0px;
+
+    .imgIG {
+      width: 3.5vh;
+      height: 3.5vh;
+      bottom: 0px;
+    }
+  }
+
+  .imgIG {
+    width: 3.5vh;
+    height: 3.5vh;
+    bottom: 0px;
   }
 
   Form {
