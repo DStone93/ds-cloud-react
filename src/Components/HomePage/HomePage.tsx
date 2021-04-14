@@ -4,7 +4,8 @@ import { useState } from "react";
 import gitHubLogo from "../../data/gitHubLogo.png";
 import Derrick_Stone_Resume from "../../resume/Derrick_Stone_Resume.pdf";
 import {template_id, service_id, user_id} from '../../keys';
-import * as emailjs from 'emailjs-com';
+// import * as emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com'
 import "./style.scss";
 
 export function HomePage(props: {}) {
@@ -12,22 +13,23 @@ export function HomePage(props: {}) {
   const [usersEmail, setUsersEmail] = useState("");
   const [usersMessage, setUsersMessage] = useState("");
 
-  let data = {
+  let templatePrams = {
     from_name: usersName,
     from_email: usersEmail,
     message: usersMessage,
-
   };
 
-  console.log(usersEmail, usersMessage, usersName)
+  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
+  
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
     emailjs.send(
       service_id,
       template_id,
-      data,
+      // vvv this needs to be "templatePrams"
+      templatePrams,
       user_id
     )
       .then((response) => {
@@ -36,14 +38,17 @@ export function HomePage(props: {}) {
       .catch((err) => {
         console.log('FAILED...', err);
       });
+
+      e.target.reset();
   };
 
-  function validateEmail (email:any){
-    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if(!regex.test(email)){
-      return "Invalid E-mail"
-    }
-  }
+  // function validateEmail (email:any){
+  //   let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  //   if(!regex.test(email)){
+  //     throw "Invalid E-mail"
+  //   }
+  //   setUsersEmail(email)
+  // }
 
   return (
     <MainLayout>
@@ -77,16 +82,14 @@ export function HomePage(props: {}) {
       </section>
 
       <section id="contactPage">
-      <p>Contact me at <a href="mailto:dstone16640@alumni.focuscollege.com">dstone16640@alumni.focuscollege.com</a></p>
-
         <div className="contactContainer">
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Row className="RowSpace">
               <h1>Contact</h1>
-              <h5>Under Construction</h5>
             </Row>
             <Row className="RowSpace">
               <Form.Control
+                required
                 name="from_name"
                 onChange={(e) => setUsersName(e.target.value)}
                 placeholder="Enter Name"
@@ -94,8 +97,9 @@ export function HomePage(props: {}) {
             </Row>
             <Row className="RowSpace">
               <Form.Control
-                // pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-                type="email"
+                required
+                
+                pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
                 name="from_email"
                 onChange={(e) => setUsersEmail(e.target.value)}
                 placeholder="Enter E-mail"
@@ -103,6 +107,7 @@ export function HomePage(props: {}) {
             </Row>
             <Row className="RowSpace">
               <Form.Control
+                required
                 name="message"
                 onChange={(e) => setUsersMessage(e.target.value)}
                 className="cOMessage"
@@ -111,7 +116,7 @@ export function HomePage(props: {}) {
             </Row>
             <button
             className="submitButton" 
-            onChange={handleSubmit}>
+            >
               {" "}
               Submit{" "}
             </button>
