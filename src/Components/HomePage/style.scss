@@ -117,20 +117,9 @@
     text-align: center;
   }
 
-  .socialMedia {
-    bottom: 0px;
-
-    .imgIG {
-      width: 3.5vh;
-      height: 3.5vh;
-      bottom: 0px;
-    }
-  }
-
-  .imgIG {
-    width: 3.5vh;
-    height: 3.5vh;
-    bottom: 0px;
+  .submitButton {
+    border: 0px;
+    background-color: rgb(114, 206, 223);
   }
 
   Form {
