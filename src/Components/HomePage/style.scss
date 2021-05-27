@@ -5,13 +5,21 @@
   justify-content: center;
 }
 
+.container {
+  min-width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
 .landingPage {
-  top: -70px;
+  // top: -70px;
   width: 100%;
-  height: 100vh;
+  height: 45vh;
   padding: 15% 0;
-  background: url(https://i.pinimg.com/originals/ef/70/85/ef7085be91d78613f0938fee57e45f4a.jpg)
-    no-repeat center center fixed;
+
+  background: url(https://i.pinimg.com/originals/3d/bc/4e/3dbc4edbefcd20cf83f9a37401e50a8f.jpg)
+    no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,24 +27,33 @@
 
   .dsFeature {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 38%;
+    top: 9%;
     transform: translate(-50%, -50%);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Monoton', cursive;
+
+    h1 {
+      text-align: center;
+      font-size: 5rem;
+      text-shadow: 1px 1px rgb(219, 219, 219);
+      color: #070606;
+    }
   }
 
-  h1 {
-    text-align: center;
-    font-size: 5rem;
-    text-shadow: 1px 2px rgb(5, 5, 5);
-    color: rgb(219, 192, 192);
-  }
+  .jrDevl {
+    position: absolute;
+    left: 50%;
+    top: 58%;
 
-  h4 {
-    text-align: center;
-    // text-shadow: 1px 2px rgb(5, 5, 5);
-    color: rgb(219, 192, 192);
+    h4 {
+      font-size: 3rem;
+      text-align: center;
+      font-family: 'Parisienne', cursive;
+
+      color: rgb(219, 192, 192);
+    }
   }
+  
 
   .resContainer {
     text-align: center;
@@ -54,6 +71,88 @@
     }
   }
 }
+
+/*
+
+arrow button
+
+*/
+
+.arrow{
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+/* 
+
+About me
+
+*/
+
+#aboutMe {
+  width: 100%;
+  height: 100vh;
+  // padding: 15% 0;
+  text-align: center;
+  background-color: rgb(4, 8, 9);
+  // background: url(https://wallpaperaccess.com/full/1657858.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .tempAM {
+    position: absolute;
+    top: 120%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+
+      color:white;
+      margin: 0px;
+      text-align: center;
+      background-color: none;
+      font-size: 4rem;
+      font-family: 'Parisienne', cursive;
+    }
+  }
+
+}
+
 
 // @media (min-width:320px) and (max-width:480px) {
 //   .landingPage {
@@ -75,33 +174,35 @@
 
 // }
 
-#projects {
-  border: 1px black solid;
-  width: 100%;
-  height: 100vh;
-  // padding: 15% 0;
-  text-align: center;
-  // background: url(https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=2f682168e7b0af70811c914882b0750b)
-  //   no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+// #projects {
+//   border: 1px black solid;
+//   width: 100%;
+//   height: 100vh;
+//   // padding: 15% 0;
+//   text-align: center;
+//   opacity: 0.3;
+//   background: url(https://i.gyazo.com/7d59e97d63763016c2b1bc712e747e4e.png)
+//     no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
 
-  .projCont {
-    margin-top: 6vh;
-    .githubLogo {
-      height: 9vh;
-      width: 15vw;
-    }
-  }
-}
+//   .projCont {
+//     margin-top: 6vh;
+//     .githubLogo {
+//       height: 9vh;
+//       width: 15vw;
+//     }
+//   }
+// }
 
 #contactPage {
   width: 100%;
   height: 100vh;
   // padding: 15% 0;
   text-align: center;
+
   background: url(https://wallpaperaccess.com/full/1657858.jpg) no-repeat center
     center fixed;
   -webkit-background-size: cover;

@@ -12,7 +12,7 @@ export function HeaderNav(props: {}) {
     >
       <Navbar.Toggle className="nbToggle"></Navbar.Toggle>
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="m-auto">
+        <Nav>
           <li>
             <a href="#landingPage"> Derrick Stone </a>
           </li>
