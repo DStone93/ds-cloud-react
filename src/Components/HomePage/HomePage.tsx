@@ -1,7 +1,6 @@
 import { Container, Row, Col, Button, Form, Image } from "react-bootstrap";
 
 import React, { useState } from "react";
-import gitHubLogo from "../../data/gitHubLogo.png";
 import Derrick_Stone_Resume from "../../resume/Derrick_Stone_Resume.pdf";
 import { template_id, service_id, user_id } from "../../keys";
 import emailjs from "emailjs-com";
